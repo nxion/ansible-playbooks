@@ -1,0 +1,17 @@
+---
+- hosts: all
+  vars_prompt:
+    home_user: "What is your username?"
+    git_name: "What is your full name (for git)?"
+    git_email: "What is your email (for git)?"
+  sudo: yes
+  vars:
+    workspace: /home/{{ home_user }}/Documents
+
+  tasks:
+    - name: Update APT package cache
+      action: apt update_cache=yes
+
+    - include: software.yml
+
+    - include: conf.yml
