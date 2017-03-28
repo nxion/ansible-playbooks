@@ -6,7 +6,7 @@
     git_email: "What is your email (for git)?"
   sudo: yes
   vars:
-    workspace: /home/{{ home_user }}/Documents
+    workspace: /home/{{ home_user }}/workspace
 
   tasks:
     - name: Update APT package cache
