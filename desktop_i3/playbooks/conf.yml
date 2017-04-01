@@ -1,0 +1,5 @@
+---
+tasks:
+- name: get the username running the deploy
+  local_action: command whoami
+  register: username_on_the_host
