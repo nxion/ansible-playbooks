@@ -1,5 +1,4 @@
 ---
-tasks:
-- name: get the username running the deploy
-  local_action: command whoami
-  register: logged_in_user
+  - name: get the username running the deploy
+    local_action: command whoami
+    register: logged_in_user

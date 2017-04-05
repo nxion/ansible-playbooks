@@ -1,48 +1,49 @@
 ---
 - name: Install list of packages
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=latest
+  become: true
   with_items:
-      ubuntu-restricted-extras
-      software-properties-common
-      build-essential 
-      vim
-      git
-      git-core
-      python-docutils
-      python-pip
-      python-virtualenv
-      ctags
-      alsa-base
-      pulseaudio
-      vlc
-      x264
-      pavucontrol
-      scrot
-      xserver-xorg-input-all
-      xserver-xorg-video-all
-      htop
-      network-manager
-      yubikey-neo-manager
-      nvidia-304
-      glances
-      util-linux
-      ranger
-      lm-sensors
-      tree
-      slim
-      unzip
-      imagemagick
-      i3
-      i3lock
-      i3status
-      xautolock
-      compton
-      nitrogen
-      dmenu
-      suckless-tools
-      screenfetch
-      xclip
-      rxvt-unicode-256color
-      pcmanfm
-      network-manager-openvpn
-      network-manager-openvpn-gnome
+     - ubuntu-restricted-extras
+     - software-properties-common
+     - build-essential 
+     - vim
+     - git
+     - git-core
+     - python-docutils
+     - python-pip
+     - python-virtualenv
+     - ctags
+     - alsa-base
+     - pulseaudio
+     - vlc
+     - x264
+     - pavucontrol
+     - scrot
+     - xserver-xorg-input-all
+     - xserver-xorg-video-all
+     - htop
+     - network-manager
+     - yubikey-neo-manager
+     - nvidia-304
+     - glances
+     - util-linux
+     - ranger
+     - lm-sensors
+     - tree
+     - slim
+     - unzip
+     - imagemagick
+     - i3
+     - i3lock
+     - i3status
+     - xautolock
+     - compton
+     - nitrogen
+     - dmenu
+     - suckless-tools
+     - screenfetch
+     - xclip
+     - rxvt-unicode-256color
+     - pcmanfm
+     - network-manager-openvpn
+     - network-manager-openvpn-gnome

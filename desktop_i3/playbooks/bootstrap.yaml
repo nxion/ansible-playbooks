@@ -1,14 +1,9 @@
 ---
 - hosts: all
-  vars_prompt:
-    git_name: "What is your full name (for git)?"
-    git_email: "What is your email (for git)?"
-  sudo: yes
-
   tasks:
     - name: Update APT package cache
       action: apt update_cache=yes
+      become: true
 
-    - include: software.yml
-
-    - include: conf.yml
+    - include: software.yaml
+    - include: conf.yaml
