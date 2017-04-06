@@ -1,9 +1,0 @@
----
-- hosts: all
-  tasks:
-    - name: Update APT package cache
-      action: apt update_cache=yes
-      become: true
-
-    - include: software.yaml
-    - include: conf.yaml
