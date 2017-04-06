@@ -7,5 +7,9 @@
       action: apt update_cache=yes
       become: true
 
+    - name: get the username running the deploy
+      local_action: command whoami
+      register: logged_in_user
+
     - include: software.yaml
     - include: conf.yaml
