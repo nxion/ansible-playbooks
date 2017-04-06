@@ -1,0 +1,11 @@
+---
+- hosts: all
+  sudo: yes
+  gather_facts: no
+  tasks:
+    - name: Update APT package cache
+      action: apt update_cache=yes
+      become: true
+
+    - include: software.yaml
+    - include: conf.yaml
