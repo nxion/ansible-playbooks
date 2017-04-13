@@ -1,0 +1,20 @@
+- name: Cloneing i3 configs
+    git:
+      repo: ssh://git@github.com/nxion/i3-config.git
+      dest: $HOME/.config
+
+- name: Cloneing i3 fancy lockscreen
+    git:
+      repo: 'https://github.com/meskarune/i3lock-fancy.git'
+      dest: $HOME/.stageing
+      version: master
+
+- name: Cloneing i3 configs
+    git:
+      repo: ssh://git@github.com/nxion/i3-config.git
+      dest: $HOME ./config
+
+- name: Cloneing i3 configs
+    git:
+      repo: ssh://git@github.com/nxion/i3-config.git
+      dest: $HOME ./config

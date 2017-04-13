@@ -1,7 +1,9 @@
 ---
+- name: Configure the system
 - hosts: all
   sudo: yes
-  gather_facts: no
+  gather_facts: false
+
   tasks:
     - name: Update APT package cache
       action: apt update_cache=yes
@@ -12,4 +14,5 @@
       register: logged_in_user
 
     - include: software.yaml
+    - include: git.yaml
     - include: conf.yaml
